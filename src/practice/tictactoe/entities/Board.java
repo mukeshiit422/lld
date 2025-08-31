@@ -6,7 +6,7 @@ import practice.tictactoe.exceptions.InvalidMoveException;
 public class Board {
     private final int size;
     private final Cell[][] board;
-    private int movesCount;
+    private final int movesCount;
 
     public Board(int size){
         this.size = size;
@@ -50,14 +50,14 @@ public class Board {
     }
 
     public void printBoard(){
-        System.out.println("----------------");
+        System.out.println("-------------");
         for (int i = 0; i < size; i++){
             System.out.print("| ");
             for (int j = 0; j < size; j++){
                 Symbol symbol = board[i][j].getSymbol();
                 System.out.print(symbol.getChar() + " | ");
             }
-            System.out.println("\n----------------");
+            System.out.println("\n-------------");
         }
     }
 }

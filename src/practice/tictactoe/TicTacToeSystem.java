@@ -30,7 +30,7 @@ public class TicTacToeSystem {
             System.out.printf("%s plays at (%d, %d)%n", player.getName(), row, col);
             game.makeMove(player, row, col);
             printBoard();
-            System.out.println("Game Status: " + game.getGameState());
+            System.out.println("Game Status: " + game.getGameStatus());
             if (game.getWinner() != null) {
                 System.out.println("Winner: " + game.getWinner().getName());
             }

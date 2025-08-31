@@ -1,5 +1,6 @@
 package practice.tictactoe.entities;
 
+import java.util.List;
 import practice.tictactoe.enums.GameStatus;
 import practice.tictactoe.observer.GameSubject;
 import practice.tictactoe.stategy.ColumnWinningStrategy;
@@ -8,8 +9,6 @@ import practice.tictactoe.stategy.RowWinningStrategy;
 import practice.tictactoe.stategy.WinningStrategy;
 import practice.tictactoe.states.GameState;
 import practice.tictactoe.states.InProgressState;
-
-import java.util.List;
 
 public class Game extends GameSubject {
     private final Board board;
@@ -72,9 +71,14 @@ public class Game extends GameSubject {
     public GameState getGameState() {
         return gameState;
     }
+    
 
     public void setGameState(GameState gameState) {
         this.gameState = gameState;
+    }
+
+    public GameStatus getGameStatus(){
+        return this.gameStatus;
     }
 
     public void setGameStatus(GameStatus gameStatus) {
